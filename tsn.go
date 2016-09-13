@@ -2,7 +2,7 @@
 //
 // Package for creating transaction sequence numbers
 //
-// The package offers function to obtain a monotonically increasing "timestamp" from a "wall clock"
+// The package offers a function to obtain a monotonically increasing "timestamp" from a "wall clock"
 //
 // Default implementation is a PostgreSQL database servicing as the host of the wall clock.
 // The PostgreSQL implementation is using a SEQUENCE there to be bound to a database instance there.
@@ -32,8 +32,6 @@ import (
 // to be checked, do we need to keep the database connection or is it good enough to just do the name
 // mapping. Some performance considerations and test about the behaviour of the sql.DB object may be needed
 //
-// (The original idea to use the WallClock struct as an anchor point for prepared statements i
-//  showed to be not needed)
 //
 type WallClock struct {
 	db     *sql.DB // database connection (from database/sql, is pooled)
@@ -126,7 +124,7 @@ func ping(db *sql.DB) {
 
 // Main function (internal)
 //
-// Retrieve a new TSN form database as int64
+// Retrieve a new TSN from database as int64
 func newTSN(db *sql.DB) int64 {
 
 	var tsn int64
