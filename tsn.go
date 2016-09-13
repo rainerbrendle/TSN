@@ -4,7 +4,7 @@
 //
 // The package offers a function to obtain a monotonically increasing "timestamp" from a "wall clock"
 //
-// Default implementation is a PostgreSQL database servicing as the host of the wall clock.
+// Implementation is a PostgreSQL database servicing as the host of the wall clock.
 // The PostgreSQL implementation is using a SEQUENCE there to be bound to a database instance there.
 // The database name is used as the identifier of the wallclock
 // The related database SEQUENCE object is implemented within the "clock" schema of the database
