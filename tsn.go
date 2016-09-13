@@ -66,7 +66,7 @@ func getDbTemplate() string {
 	return dbTemplate
 }
 
-// translate clock name into sb connection string
+// translate clock name into db connection string
 // conncetion string needs to have a $database$ variable to be replaced by the clock name
 //
 func dbname(name string) string {
