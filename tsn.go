@@ -48,7 +48,7 @@ var wallclocksRWLock sync.RWMutex
 // database connect string,
 // to be read from configuration
 //
-// We read from the environment at first (secure store needed eentually)
+// We read from the environment at first (secure store needed eventually)
 var dbTemplate string = ""
 
 // helper function for tracing (some better idea needed)
